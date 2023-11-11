@@ -48,7 +48,7 @@ priority = 99 # If multiple profiles are applicable, this profile has a very low
 monitors = [
 	# This profile should be applied, if a monitor on port "e-DP1" is available.
 	{
-		port = "^e-DP1$" # Match a monitor on port e-DP1
+		port = '^e-DP1$' # Match a monitor on port e-DP1
 		available = true # The monitor on port e-DP1 should be available
 	}
 ]
@@ -67,7 +67,7 @@ priority = 1 # If multiple profiles are applicable, this profile has a very high
 monitors = [
 	# This profile should be applied, if a monitor on any port other than "e-DP1" is available.
 	{
-		port = "^(?!e-DP1)$" # Match all monitors except for eDP-1
+		port = '^(?!e-DP1)$' # Match all monitors except for eDP-1
 		available = true # The monitor should be available
 	}
 ]
