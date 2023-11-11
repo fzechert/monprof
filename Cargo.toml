@@ -1,0 +1,16 @@
+[workspace]
+resolver = "2"
+members = ["monprof", "monproflib"]
+
+[workspace.package]
+authors = ["Frank Zechert <frank@zechert.net>"]
+categories = ["command-line-utilities"]
+description = "Monitor profile management and automatic switching for Linux desktops"
+documentation = "https://github.com/fzechert/monprof/wiki"
+edition = "2021"
+homepage = "https://github.com/fzechert/monprof"
+keywords = ["monitor", "display", "screen", "linux", "wayland"]
+license = "MIT"
+publish = false
+repository = "https://github.com/fzechert/monprof.git"
+version = "0.1.0"
