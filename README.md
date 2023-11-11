@@ -43,15 +43,11 @@ The following monitor profiles might exist to handle this use case:
 default_profile = true # This profile should apply if no other profile is applicable
 priority = 99 # If multiple profiles are applicable, this profile has a very low priority (0 is the highest priority)
 
-[match]
 # This profile should be applied, if the following monitors are present
-monitors = [
-	# This profile should be applied, if a monitor on port "e-DP1" is available.
-	{
-		port = '^e-DP1$' # Match a monitor on port e-DP1
-		available = true # The monitor on port e-DP1 should be available
-	}
-]
+[[match.monitor]]
+# This profile should be applied, if a monitor on port "e-DP1" is available.
+port = '^e-DP1$' # Match a monitor on port e-DP1
+available = true # The monitor on port e-DP1 should be available
 
 [settings]
 # to be defined
@@ -60,17 +56,14 @@ monitors = [
 `$XDG_CONFIG_HOME/monprof/docked.toml` contains the profile that should apply once the laptop is docked.
 
 ```toml
-priority = 1 # If multiple profiles are applicable, this profile has a very high priority
+priority = 10 # If multiple profiles are applicable, this profile has a quite high priority
 
 [match]
 # This profile should be applied, if any external monitors are present
-monitors = [
-	# This profile should be applied, if a monitor on any port other than "e-DP1" is available.
-	{
-		port = '^(?!e-DP1)$' # Match all monitors except for eDP-1
-		available = true # The monitor should be available
-	}
-]
+[[match.monitor]]
+# This profile should be applied, if a monitor on any port other than "e-DP1" is available.
+port = '^(?!e-DP1)$' # Match all monitors except for eDP-1
+available = true # The monitor should be available
 
 [settings]
 
