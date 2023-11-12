@@ -13,5 +13,6 @@ repository.workspace = true
 version.workspace = true
 
 [dependencies]
+monproflib = {"path" = "../monproflib"}
 log.workspace = true
 env_logger = "0.10.1"
