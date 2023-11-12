@@ -56,9 +56,8 @@ available = true # The monitor on port e-DP1 should be available
 `$XDG_CONFIG_HOME/monprof/docked.toml` contains the profile that should apply once the laptop is docked.
 
 ```toml
-priority = 10 # If multiple profiles are applicable, this profile has a quite high priority
+priority = 10 # If multiple profiles are applicable, this profile has a high priority
 
-[match]
 # This profile should be applied, if any external monitors are present
 [[match.monitor]]
 # This profile should be applied, if a monitor on any port other than "e-DP1" is available.
