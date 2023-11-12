@@ -1,3 +1,7 @@
+mod cli;
+
+use clap::Parser;
+use cli::Arguments;
 use log::{trace, LevelFilter};
 use monproflib::error::{self, MonprofError};
 use std::process::ExitCode;
@@ -21,6 +25,9 @@ fn init_logging(verbose: bool, quiet: bool, json_output: bool) {
 }
 
 fn main() -> ExitCode {
+    let args = Arguments::parse();
+    init_logging(args.verbose, args.quiet, args.json_output);
+
     let execution_result: Result<(), Box<dyn MonprofError>> = { Ok(()) };
 
     if let Err(error) = execution_result {

@@ -14,5 +14,6 @@ version.workspace = true
 
 [dependencies]
 monproflib = {"path" = "../monproflib"}
+clap = { version = "4.4.8", features = ["derive"] }
 log.workspace = true
 env_logger = "0.10.1"
