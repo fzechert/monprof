@@ -4,7 +4,7 @@ mod monprof_error;
 use log::error;
 use std::iter;
 
-pub use self::monprof_error::MonprofError;
+pub use monprof_error::MonprofError;
 
 pub fn print_error_chain(error: &dyn MonprofError) {
     error!("ERROR: {}", error);
